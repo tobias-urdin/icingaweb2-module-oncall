@@ -58,5 +58,15 @@ class OnCallConfigForm extends ConfigForm
 				'multiOptions' => $contacts,
 			]
 		);
+
+		$this->addElement(
+			'checkbox',
+			'oncall_enabled',
+			[
+				'required'    => true,
+				'label'       => $this->translate('Enable notifications'),
+				'description' => $this->translate('If notifications should be enabled.'),
+			]
+		);
 	}
 }

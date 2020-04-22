@@ -20,8 +20,11 @@ class IndexController extends Controller
 	 */
 	public function indexAction()
 	{
+		$cfg = $this->Config();
+		$this->view->enabled = (bool)$cfg->get('oncall', 'enabled', '0');
+
 		$this->view->form = $form = new OnCallConfigForm();
 		$form->assertPermission('config/modules');
-		$form->setIniConfig($this->Config())->handleRequest();
+		$form->setIniConfig($cfg)->handleRequest();
 	}
 }

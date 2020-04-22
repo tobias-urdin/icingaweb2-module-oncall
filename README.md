@@ -2,7 +2,7 @@
 
 Icinga OnCall provides a config page for logged in users with the access to the config/modules permission to select a User for oncall.
 
-The pager of the selected User is then saved into the /etc/icingaweb2/modules/oncall/config.ini file and can be read by your notification scripts.
+The pager of the selected User and if notifications should be enabled is then saved into the /etc/icingaweb2/modules/oncall/config.ini file and can be read by your notification scripts.
 
 It also provides an incoming URL like https://icinga/oncall/incoming that can be called with a HTTP GET to acknowledge all unhandled host and service issues.
 
@@ -34,4 +34,5 @@ This is an example on how config.ini looks when saved and the above user was sel
 ```
 [oncall]
 contact = "123456789"
+enabled = "1"
 ```
