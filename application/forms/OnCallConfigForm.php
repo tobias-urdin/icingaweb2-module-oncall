@@ -63,7 +63,7 @@ class OnCallConfigForm extends ConfigForm
 			'checkbox',
 			'oncall_enabled',
 			[
-				'required'    => true,
+				'required'    => false,
 				'label'       => $this->translate('Enable notifications'),
 				'description' => $this->translate('If notifications should be enabled.'),
 			]
